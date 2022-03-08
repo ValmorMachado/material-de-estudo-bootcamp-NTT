@@ -15,6 +15,8 @@ Ao usar a List ou a MutableList, é necessário especificar o tipo de elemento q
 Por exemplo, a List<Int> contém uma lista de números inteiros e a List<String> contém uma lista de strings.
 Se você definir uma classe CASA em seu programa, poderá criar uma List<CASA> com uma lista de instâncias de objetos CASA.
 
+REFERENCIA: https://developer.android.com/codelabs/basic-android-kotlin-training-lists
+
 */
 
 
@@ -23,9 +25,14 @@ fun main() {
     // Delarando uma lista de inteiros
     val numeros: List<Int> = listOf(1, 2, 3, 4, 5, 6)
 
-    // Forma simplificada de declaração da lista
-    //val numeros = listOf(1, 2, 3, 4, 5, 6)
+    /*
+    Se o tipo de variável puder ser deduzido (ou inferido) com base no valor no lado direito do operador de atribuição (=), será
+    possível omitir o tipo de dados da variável. Dessa forma, a declaração fica:
+    
+    val numeros = listOf(1, 2, 3, 4, 5, 6)
 
+    */
+    
     println("List: $numeros")
     println("Size: ${numeros.size}")
 
@@ -42,6 +49,20 @@ fun main() {
 
     println("A lista tem o número 4?(retorna true ou false) ${numbers.contains(4)}")
     println("A lista tem o número 7?(retorna true ou false) ${numbers.contains(7)}")
+    
+    // Declarando a lista
+    val cores = listOf("verde", "laranja", "azul")
+    // Usando os métodos reversed e sorted
+    println("Invertendo a lista: ${cores.reversed()}")
+	println("Lista original: $cores")
+    
+    println("Ordenando a lista: ${cores.sorted()}")
+    
+    //Declarando uma lista de números ímpares
+    val numerosImpares = listOf(5, 3, 7, 1)
+    
+	println("Lista: $numerosImpares")
+	println("Lista ordenada: ${numerosImpares.sorted()}")
 
 }
 
